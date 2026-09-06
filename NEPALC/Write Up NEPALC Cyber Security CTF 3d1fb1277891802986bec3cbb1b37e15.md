@@ -8,11 +8,11 @@ Web Exploitation
 
 1. Recon
 
-![image.png](image%201.png)
+![image.png](Asset/image%201.png)
 
 Web memiliki login page, kita coba dulu weak credensial seperti admin;admin, admin;password
 
-![image.png](image%202.png)
+![image.png](Asset/image%202.png)
 
 Kita berhasil login, namun kita tidak memiliki akses sebagai admin. 
 
@@ -26,11 +26,11 @@ b.  Exploit
 
 Setelah mendapatkan JWT tokennya, kita bisa mendecode JWT token tersebut di jwt.io
 
-![image.png](image%203.png)
+![image.png](Asset/image%203.png)
 
 Setelah didecode, ternyata role dari user kita masih user, kita bisa mengganti value dari role tersebut menjadi admin.
 
-![image.png](image%204.png)
+![image.png](Asset/image%204.png)
 
 ```jsx
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJleHAiOjE3ODg0OTcwMTV9.or1dstLuY434fSm5u_yHsQdzQfUeGogasVKu1wMB2FA
@@ -38,7 +38,7 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJ
 
 Langsung saja masukkan jwt token tersebut ke cookie!
 
-![image.png](image%205.png)
+![image.png](Asset/image%205.png)
 
 Setelah kita mengganti value dari cookie-nya lalu refresh webnya, kita berhasil mendapatkan flag!
 
@@ -46,11 +46,11 @@ Setelah kita mengganti value dari cookie-nya lalu refresh webnya, kita berhasil 
 
 1. **Broken Calculator**
 
-![image.png](image%206.png)
+![image.png](Asset/image%206.png)
 
 1. Recon
     
-    ![image.png](image%207.png)
+    ![image.png](Asset/image%207.png)
     
     Web ini adalah web kalkulator sederhana pada umumnya, jika kita menginput 7*7 maka outputnya adalah 49
     
@@ -60,7 +60,7 @@ Setelah kita mengganti value dari cookie-nya lalu refresh webnya, kita berhasil 
     curl -v http://202.46.150.52:8082/
     ```
     
-    ![image.png](image%208.png)
+    ![image.png](Asset/image%208.png)
     
     Ternyata web ini terbuat dari bahasa php, dan jika kita memasukkan index.php di url webnya, maka web akan merespons dengan normal.
     
@@ -72,11 +72,11 @@ Ada banyak sekali kerentanan pada php, contohnya adalah SSTI, coba kita input pa
 system('id')
 ```
 
-![image.png](image%209.png)
+![image.png](Asset/image%209.png)
 
 Ternyata kita tidak bisa memasukkan system(’id’), coba kita input huruf asal asalan
 
-![image.png](image%2010.png)
+![image.png](Asset/image%2010.png)
 
 Ternyata outputnya tidak sama dengan output dari system(’id’), sepertinya di web ini ada WAF nya
 
@@ -88,7 +88,7 @@ Dari URL tersebut, kita bisa membypass WAF nya dengan mengencode “system” ke
 "\x73\x79\x73\x74\x65\x6d"('whoami')
 ```
 
-![image.png](image%2011.png)
+![image.png](Asset/image%2011.png)
 
 Dan sepertinya kita berhasil mendapatkan RCE nya!
 
@@ -98,7 +98,7 @@ Karena flagnya tidak ketemu ketemu, kita coba cek env dari web ini
 "\x73\x79\x73\x74\x65\x6d"('env')
 ```
 
-![image.png](image%2012.png)
+![image.png](Asset/image%2012.png)
 
 Ternyata flag ada di env!
 
@@ -106,11 +106,11 @@ Ternyata flag ada di env!
 
 1. Ketuk Pintu
 
-![image.png](image%2013.png)
+![image.png](Asset/image%2013.png)
 
 1. Recon
     
-    ![image.png](image%2014.png)
+    ![image.png](Asset/image%2014.png)
     
     Web ini hanya html static dan tidak ada fitur apapun, setelah enumerasi lebih lanjut ternyata web ini memakai php, bisa dibuktikan dengan memasukkan index.php ke url nya
     
@@ -118,13 +118,13 @@ Ternyata flag ada di env!
     
     Setelah coba beberapa kali kemungkinan vuln, ternyata kita bisa memasukkan parameter ?id di dalam url nya
     
-    ![image.png](image%2015.png)
+    ![image.png](Asset/image%2015.png)
     
     Dipastikan bahwa ini adalah IDOR, jadi kita bisa memasukkan nilai 1 pada parameter ?id
     
     `index.php?id=1`
     
-    ![image.png](image%2016.png)
+    ![image.png](Asset/image%2016.png)
     
     Flag ditemukan!
     
@@ -135,7 +135,7 @@ Ternyata flag ada di env!
 
 1. **The Ancient Message**
     
-    ![image.png](image%2017.png)
+    ![image.png](Asset/image%2017.png)
     
     1. Recon
         
@@ -147,11 +147,11 @@ Ternyata flag ada di env!
         
         Coba kita cek jenis cipher apakah ini menggunakan web cipher identifier
         
-        ![Screenshot 2026-09-04 130357.png](Screenshot_2026-09-04_130357.png)
+        ![Screenshot 2026-09-04 130357.png](Asset/Screenshot_2026-09-04_130357.png)
         
         Hasilnya menunjukkan cipher ini kemungkinan besar antara ROT cipher dan Caesar cipher, kita coba dulu decrypt di web caesar cipher decoder.
         
-        ![image.png](image%2018.png)
+        ![image.png](Asset/image%2018.png)
         
         Ternyata jenis cipher tersebut adalah caesar cipher dengan shift 7!
         
@@ -159,7 +159,7 @@ Ternyata flag ada di env!
         
 2. The secret ke
     
-    ![image.png](image%2019.png)
+    ![image.png](Asset/image%2019.png)
     
     1. Recon
         
@@ -172,7 +172,7 @@ Ternyata flag ada di env!
         
         Kita cari jenis ciphernya di web cipher identifier
         
-        ![image.png](image%2020.png)
+        ![image.png](Asset/image%2020.png)
         
         Jenis ciphernya adalah Vigenere Cipher, di mana kita tidak dikasih key untuk mendecryptnya.
         
@@ -180,13 +180,13 @@ Ternyata flag ada di env!
         
         Di sini kita brute force huruf dari key-nya sampai cocok dengan format flag NEPALC, setelah brute force manual, kita menemukan bahwa key-nya adalah msiste yang membuat kita mendapatkan flagnya! 
         
-        ![image.png](image%2021.png)
+        ![image.png](Asset/image%2021.png)
         
         **FLAG : `NEPALC{V1G3N_S1MPL3_S3CRT}`**
         
 3. Binary Mastery
     
-    ![image.png](image%2022.png)
+    ![image.png](Asset/image%2022.png)
     
     Diberikan file cipher2.txt yang isinya adalah kumpulan dari hex, dan dikasih tau juga ada key ‘Sakti’
     
@@ -203,6 +203,6 @@ Ternyata flag ada di env!
         
         Kita bisa menggunakan cyber chef dengan urutan ‘from hex’ lalu ‘XOR’ dengan key ‘Sakti’
         
-        ![image.png](image%2023.png)
+        ![image.png](Asset/image%2023.png)
         
         **FLAG** : `NEPALC{X0R_L0C4L_B1N4RY}`
