@@ -26,7 +26,7 @@ Diberikan sebuah link website, langsung saja visit websitenya
 http://xebec.cylabacademy.net:39513/
 ```
 
-![image.png](image.png)
+![image.png](../Images/flags-are-stepic-1.png)
 
 Web hanya berisi gambar bendera dari berbagai negara, tidak ada fitur apapun yang ada di web ini. Berdasarkan hint yang diberikan, kita diberi tahu bahwa flag ada di bendera dari negara yang tidak ada.
 
@@ -34,7 +34,7 @@ Web hanya berisi gambar bendera dari berbagai negara, tidak ada fitur apapun yan
 
 **Step 2 : Mencari bendera dari negara yang tidak ada**
 
-![image.png](image%201.png)
+![image.png](../Images/flags-are-stepic-2.png)
 
 Setelah kita scroll webnya, kita menemukan sebuah gambar bendera dari negara Upanzi yang merupakan negara palsu/tidak ada.
 
