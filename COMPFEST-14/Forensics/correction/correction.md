@@ -124,7 +124,7 @@ Bytesnya sudah tidak kebalik lagi, namun belum ada magic bytesnya, jadi kita tin
 
 Setelah diperbaiki, file tersebut berisi gambar garis hitam putih.
 
-![fixed.png](fixed.png)
+![fixed.png](images/fixed.png)
 
 Berdasarkan hint gambar yang hanya berisi warna hitam dan putih dapat merepresentasikan Biner dengan warna putih berarti 1 dan warna hitam berarti 0.
 
@@ -208,6 +208,6 @@ Jika sudah, maka akan muncul gambar bulan dengan flag yang disamarkan di dalam g
 
  
 
-![final_flag.png](final_flag.png)
+![final_flag.png](images/final_flag.png)
 
 `COMPFEST14{hHhH_th0u_4re_c0Rr3ct!_634af16261}`
