@@ -59,7 +59,7 @@ Kita perbaiki dulu file headernya agar sesuai dengan file header PNG pada umumny
 
 Setelah diperbaiki, file bisa dibuka, tetapi gambarnya belum sepenuhnya tampil.
 
-![garden_blekk.png](garden_blekk.png)
+![garden_blekk.png](images/garden_blekk.png)
 
 Berdasarkan hint yang diberikan, kita disuruh untuk mencari offset yang menyebabkan file `garden_blekk.png` corrupt, namun kita belum tau offset mana yang corrupt.
 
@@ -69,7 +69,7 @@ Berdasarkan hint yang diberikan, kita disuruh untuk mencari offset yang menyebab
 
 Kita beralih dulu ke file `eureka.jpg` , kita coba buka terlebih dahulu isi dari filenya.
 
-![eureka.jpg](eureka.jpg)
+![eureka.jpg](images/eureka.jpg)
 
 Ternyata tidak ada apa-apa di dalam isi filenya, dan ada kalimat yang sepertinya menyinggung offset dari file `garden_blekk.png` yang corrupt, tapi kita masih belum dikasih tau offset mana yang corrupt.
 
@@ -118,6 +118,6 @@ Di sini saya membuat script python yang meng-XOR offset ke 202 sampai 205 dengan
 
 Setelah itu kita buka file `fixed.png` dan jika kita atur kecerahan dari gambarnya menggunakan aplikasi editing foto, kita akan mendapatkan flag.
 
-![final_flag.png](final_flag.png)
+![final_flag.png](images/final_flag.png)
 
 `COMPFEST14{welcome_2_the_mag1k_klubzz}`
