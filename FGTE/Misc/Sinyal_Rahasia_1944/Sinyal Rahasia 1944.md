@@ -26,7 +26,7 @@ yucmn dytgt kyctx mudhn xkzec gmrfd xkztl spge
 
 Dari deskripsi dan hint chall yaitu **kue pretzel** dan **kapal U-Boat,** sama-sama berasal dari negara Jerman, jadi dapat disimpulkan bahwa cipher text yang diberikan adalah cipher yang berasal dari negara Jerman yaitu `enigma cipher` .
 
-![image.png](image.png)
+![image.png](Image/image.png)
 
 Di sini saya coba decode ciphertext nya di web cryptii, lalu posisi rotornya ubah sesuai posisi angka yang ada di deskripsi chall, setelah kita decode kita pun akan mendapatkan sebuah url.
 
@@ -38,21 +38,21 @@ Di sini saya coba decode ciphertext nya di web cryptii, lalu posisi rotornya uba
 
 Langsung saja visit web tersebut.
 
-![image.png](image%201.png)
+![image.png](Image/image%201.png)
 
 Kita coba source code dari web ini
 
-![image.png](image%202.png)
+![image.png](Image/image%202.png)
 
 Terdapat string aneh yang sudah diencode ke base64, yang jika kita decode akan menghasilkan pesan **`“ada di header”` ,** jadi dapat kita simpulkan ada sesuatu yang tersembunyi di header request web ini.
 
 Di sini kita bisa menggunakan panel network dari devtools untuk melihat request yang ada pada web ini.
 
-![image.png](image%203.png)
+![image.png](Image/image%203.png)
 
 Terdapat file png di request web ini, langsung saja kita download file png tersebut.
 
-![qr-DXX1lDA7.png](qr-DXX1lDA7.png)
+![qr-DXX1lDA7.png](Image/qr-DXX1lDA7.png)
 
 Ternyata file png tersebut adalah sebuah kode QR yang jika kita decode maka kita akan mendapatkan flag.
 
