@@ -27,7 +27,7 @@ cat.jpg: JPEG image data, JFIF standard 1.01, resolution (DPI), density 72x72, s
 
 Tidak ada keanehan, coba kita buka isi dari file cat.jpg ini
 
-![cat.jpg](cat.jpg)
+![cat.jpg](Image/cat.jpg)
 
 Tidak ada keanehan juga, hanya foto kucing meme senyum bilek biasa.
 
