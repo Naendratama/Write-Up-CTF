@@ -13,7 +13,7 @@ Pintu masuk portal administrasi turnamen menggunakan sistem verifikasi tiket ses
 
 **Step 1 : Visit Web**
 
-![image.png](image.png)
+![image.png](Image/image.png)
 
 Web hanya memiliki 1 halaman yang statis, tidak ada fitur apapun yang ada di web ini. Terdapat JWT Token yang menggunakan algoritma RSA-256 (RS256), status dari sesi kita saat ini yaitu Usernya Guest dan Rolenya Guest, ada juga file public-key.pem yang bisa kita download.
 
@@ -39,7 +39,7 @@ Selanjutnya kita coba decode JWT Token yang terlampir di web tersebut menggunaka
 
 Hasil Decode :
 
-![image.png](image%201.png)
+![image.png](Image/image%201.png)
 
 Terlihat User dan Role dari sesi kita masi Guest, tujuan kita adalah eskalasi sesi kita menjadi admin atau bisa dibilang mengubah role kita dari guest menjadi admin.
 
@@ -237,7 +237,7 @@ Token baru sudah didapatkan, langsung saja ubah value dari cookie yang ada di we
 
 Hasil :
 
-![Screenshot 2026-10-17 173412.png](Screenshot_2026-10-17_173412.png)
+![Screenshot 2026-10-17 173412.png](Image/Screenshot_2026-10-17_173412.png)
 
 **`ITFEST{jwt_k3y_c0nfus10n_m4st3r}`**
 
