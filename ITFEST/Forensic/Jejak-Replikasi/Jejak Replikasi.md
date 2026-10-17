@@ -68,6 +68,6 @@ Lalu ada sebuah hex yang sepertinya dienkripsi menggunakan algoritma AES
 
 Langsung saja kita decode hex yang terenkripsi tersebut menggunakan KEY dan IV yang sudah kita dapatkan di cyber chef.
 
-![image.png](image.png)
+![image.png](Image/image.png)
 
 **`ITFEST{dcsync_k3rb3r0s_4d_pwn3d}`**
