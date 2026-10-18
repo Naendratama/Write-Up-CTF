@@ -13,15 +13,15 @@ Sistem keamanan ini hanya menerima akses jika kamu membuktikan kepemilikan akun 
 
 **Step 1 : Enumerasi Web**
 
-![Screenshot 2026-10-17 181800.png](Screenshot_2026-10-17_181800.png)
+![Screenshot 2026-10-17 181800.png](Image/Screenshot_2026-10-17_181800.png)
 
 Di sini web hanya memiliki 1 halaman saja, terdapat fitur untuk input Username dan tombol generate jika dipencet akan menghasilkan string acak atau nonce.
 
-![image.png](image.png)
+![image.png](Image/image.png)
 
 Terdapat pula fitur verify, dimana fitur tersebut membutuhkan sebuah SSH Signature untuk menghasilkan output. Jika SSH Signature yang diinput salah, maka output nya adalah **“Invalid Signature”.**
 
-![Screenshot 2026-10-17 182022.png](Screenshot_2026-10-17_182022.png)
+![Screenshot 2026-10-17 182022.png](Image/Screenshot_2026-10-17_182022.png)
 
 Di sini, kita coba intercept request saat generate nonce-nya, dan menemukan terdapat key bernama **`namespace`** yang memiliki value **`ctfd-auth`**
 
@@ -77,10 +77,10 @@ U1NIU0lHAAAAAQAAA[REDACTED]
 
 SSH Signature sudah kita dapatkan, langsung saja kita input ke kolom signature dan klik verify.
 
-![Screenshot 2026-10-17 181953.png](Screenshot_2026-10-17_181953.png)
+![Screenshot 2026-10-17 181953.png](Image/Screenshot_2026-10-17_181953.png)
 
 Di sini usernamenya yang kita masukkan harus sesuai dengan username dari akun github kita.
 
-![Screenshot 2026-10-17 182004.png](Screenshot_2026-10-17_182004.png)
+![Screenshot 2026-10-17 182004.png](Image/Screenshot_2026-10-17_182004.png)
 
 **`ITFEST{55h_k3yg3n_51gn1ng_15_4w350m3_b077a2}`**
