@@ -79,7 +79,7 @@ ___chcdctccptcae_
 
 Dari deskripsi chall yaitu **`shift you later` ,** sepertinya output sudah diencode menggunakan teknik pergeseran huruf seperti ROT13, ROT47, Caesar Cipher, dan Vigenere Cipher.
 
-![image.png](image.png)
+![image.png](Image/image.png)
 
 Ketika kita coba untuk mendecode menggunakan ROT47, baris pertama dari output seperti menunjukkan sebuah deretan angka yang familiar dengan byte yang menjadi magic bytes dari file signature. Di sini kita simpan hasil outputnya ke file `rot47.txt`
 
@@ -103,7 +103,7 @@ Script ini akan membuka isi dari file `rot47.txt`, lalu isi dari file tersebut d
 
 Setelah itu akan muncul file PNG yang berisi QR Code yang terpotong.
 
-![hasil.png](hasil.png)
+![hasil.png](Image/hasil.png)
 
 ---
 
@@ -155,7 +155,7 @@ Kita coba hitung LENGTH IDAT yang seharusnya
 
 Terdapat kesalahan deklarasi LENGTH IDAT pada file yang seharusnya itu 770 `(00 0003 02)` , namun tertulisnya 259 `(00 0001 03)` , setelah kita perbaiki LENGTH IDAT nya maka gambar QR Code terpotong tersebut akan menjadi utuh.
 
-![haha.png](haha.png)
+![haha.png](Image/haha.png)
 
 Jika kita scan akan menghasilkan flag
 **`COMPFEST14{Th1s_1S_Th3_c0rrr3ct_Sc4n_M3_Fl4g_5425470cc0}`**
